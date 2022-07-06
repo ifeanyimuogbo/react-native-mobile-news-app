@@ -27,10 +27,11 @@ const styles_ = StyleSheet.create({
     marginVertical: 10,
   },
 });
-export default function Comments({ comments, loading, newsId }) {
+export default function Comments({ comments, loading, newsId, setLoading }) {
   const { input, button } = styles;
   const dispatch = useDispatch();
   const onSubmitComment = async ({ name, avatar, comment }) => {
+    setLoading(true);
     await dispatch.commentsModel.createComment({
       newsId,
       commentData: {
@@ -39,6 +40,7 @@ export default function Comments({ comments, loading, newsId }) {
         comment,
       },
     });
+    setLoading(false);
   };
 
   return (

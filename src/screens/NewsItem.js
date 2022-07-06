@@ -57,7 +57,11 @@ export default function NewsItem({ route, navigation }) {
             images={images}
           />
 
-          <Comments comments={comments} newsId={newsItem.id} />
+          <Comments
+            comments={comments}
+            newsId={newsItem.id}
+            setLoading={setLoading}
+          />
         </ScrollView>
       )}
     </SafeAreaProvider>
