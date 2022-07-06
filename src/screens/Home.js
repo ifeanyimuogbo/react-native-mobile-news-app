@@ -29,7 +29,7 @@ export default function Home({ navigation }) {
       limit: 10,
     });
     setLoading(false);
-  }, []);
+  }, [state.currentPage]);
 
   useEffect(() => {
     getNews();

@@ -13,13 +13,6 @@ export default function ImageSlider({ images }) {
   };
   return (
     <View style={styles.wrapper} onLayout={onLayout}>
-      {/* {images.map((image, index) => (
-        <Image
-          key={index}
-          source={{ url: image.image }}
-          style={{ width: 100, height: 100, borderRadius: 8 }}
-        />
-      ))} */}
       <SliderBox
         images={images.map((image) => image.image)}
         parentWidth={width}

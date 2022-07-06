@@ -35,14 +35,14 @@ export default function News({ navigation, setLoading }) {
         <Text>No news data</Text>
       )}
 
-      {Boolean(news) && news.length > 0 && (
-        <>
-          <Divider width={1} />
-          <View style={styles.paginationWrapper}>
-            <Newspagination pageNumber={1} paginate={paginate} />
-          </View>
-        </>
-      )}
+      {/* {Boolean(news) && news.length > 0 && (
+        <> */}
+      <Divider width={1} />
+      <View style={styles.paginationWrapper}>
+        <Newspagination pageNumber={1} paginate={paginate} />
+      </View>
+      {/* </>
+      )} */}
     </View>
   );
 }
