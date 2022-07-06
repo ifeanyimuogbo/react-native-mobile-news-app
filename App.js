@@ -1,15 +1,11 @@
-import { View, Text } from "react-native";
+import RootNavigation from "./navigation";
+import { LogBox } from "react-native";
+
+LogBox.ignoreLogs([
+  "ViewPropTypes will be removed",
+  "ColorPropType will be removed",
+]);
 
 export default function App() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
-    </View>
-  );
+  return <RootNavigation />;
 }
